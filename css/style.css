@@ -56,101 +56,60 @@ img {
 }
 
 /* ============================================
-   HERO SECTION - AGENCY READY
+   HERO SECTION - TYPOGRAPHY FOCUSED
    ============================================ */
 .hero {
   position: relative;
-  height: 100vh;
+  height: 90vh;
+  /* Slightly less than full screen for editorial feel */
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  color: #fff;
+  color: var(--text-primary);
   text-align: center;
-}
-
-.hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.hero-bg-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* Face-dominant portrait alignment */
-  object-position: center 20%;
-  /* Slight zoom for intensity, but less extreme since image is better */
-  transform: scale(1.05);
-  /* Contrast for commercial look */
-  filter: contrast(1.1) brightness(0.95);
-}
-
-/* Overlay: Clear center for face visibility, subtle gradient at edges */
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.5) 100%);
-  z-index: 2;
+  background-color: var(--bg-color);
 }
 
 .hero-content {
-  position: relative;
-  z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2.5rem;
-  /* Increased spacing for editorial feel */
-  padding: 0 1rem;
-  width: 100%;
+  gap: 2rem;
+  padding: 0 5%;
+  max-width: 1200px;
+  animation: fadeIn 1.2s ease-out;
 }
 
 .hero-name {
-  /* Dominant, Agency-style typography */
-  font-size: clamp(3rem, 7vw, 6rem);
-  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: -0.02em;
-  line-height: 0.9;
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  margin: 0;
-}
-
-.hero-profile-container {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 3px solid #fff;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-  flex-shrink: 0;
-}
-
-.hero-profile-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /* Face-only crop for the circle */
-  object-position: center 15%;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: #000;
 }
 
 .hero-subtext {
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.3em;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  opacity: 0.9;
-  margin-top: -1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ============================================
