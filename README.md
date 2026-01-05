@@ -3,7 +3,7 @@
 Professional, minimalist, and agency-ready portfolio website.
 
 ## Features
-- **Agency-Ready Hero**: Face-dominant crop, bold typography.
+- **Agency-Ready Hero**: Typography-focused, clean and minimal.
 - **Curated Portfolio**: Editorial and commercial work showcase.
 - **Responsive**: Mobile-first design.
 
