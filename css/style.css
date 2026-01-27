@@ -46,6 +46,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 h1,
@@ -94,7 +95,7 @@ img {
   gap: 2rem;
   padding: 0 5%;
   max-width: 1200px;
-  animation: fadeIn 1.2s ease-out;
+  animation: fadeIn 1.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .hero-name {
@@ -103,7 +104,7 @@ img {
   text-transform: uppercase;
   letter-spacing: -0.03em;
   line-height: 1.1;
-  color: #000;
+  color: var(--text-primary);
 }
 
 .hero-subtext {
@@ -127,16 +128,7 @@ img {
   }
 }
 
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  padding: 0 5%;
-  max-width: 1200px;
-  animation: fadeIn 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
+
 
 /* ============================================
    SECTIONS GENERAL
@@ -262,6 +254,76 @@ footer {
   color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+.dark footer {
+  border-top: 1px solid #2a2a2a;
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+.skip-nav {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--text-primary);
+  color: var(--bg-color);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  z-index: 9999;
+  transition: top 0.3s;
+}
+
+.skip-nav:focus {
+  top: 0;
+}
+
+/* ============================================
+   SCROLL REVEAL ANIMATIONS
+   ============================================ */
+.portfolio-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.portfolio-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger animation for portfolio items */
+.portfolio-item:nth-child(1).visible {
+  transition-delay: 0.1s;
+}
+
+.portfolio-item:nth-child(2).visible {
+  transition-delay: 0.2s;
+}
+
+.portfolio-item:nth-child(3).visible {
+  transition-delay: 0.3s;
+}
+
+.portfolio-item:nth-child(4).visible {
+  transition-delay: 0.1s;
+}
+
+.portfolio-item:nth-child(5).visible {
+  transition-delay: 0.2s;
+}
+
+.portfolio-item:nth-child(6).visible {
+  transition-delay: 0.3s;
+}
+
+.portfolio-item:nth-child(7).visible {
+  transition-delay: 0.1s;
+}
+
+.portfolio-item:nth-child(8).visible {
+  transition-delay: 0.2s;
 }
 
 /* UI Elements */
